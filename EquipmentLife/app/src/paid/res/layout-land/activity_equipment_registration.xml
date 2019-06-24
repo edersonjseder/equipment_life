@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_equipment_registration_activity"
+    android:background="@color/theme_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/registration_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Toolbar Equipment registration include -->
+        <include layout="@layout/toolbar_equipment_registration" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_equipment_registration_content"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:background="@drawable/border_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registration_toolbar"
+        app:layout_constraintVertical_bias="0.425">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="400dp"
+            android:layout_height="match_parent">
+
+            <!-- Equipment registration include -->
+            <include layout="@layout/equipment_registration_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Equipment Image upload -->
+            <!-- Image selection -->
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registration_toolbar">
+
+                <ImageView
+                    android:id="@+id/imageView_equipment_registration_picture_land"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/album_icon"
+                    android:contentDescription="@string/equipment_upload_image_description"
+                    android:gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/image_camera_picture_upload"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/menu_transparent"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:src="@drawable/ic_camera_picture" />
+
+                <!-- Equipment Image upload progressBar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="5dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_equipment_registration_upload_picture"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <!-- Equipment Image upload progressBar -->
+
+            </FrameLayout>
+            <!-- Equipment Image upload -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Equipment serial number search -->
+    <LinearLayout
+        android:id="@+id/ll_equipment_serial_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/border_color"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/side_padding_search"
+        android:paddingEnd="@dimen/side_padding_search"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registration_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_serial_search_title"
+                    style="@style/TextLabels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:text="@string/label_dialog_serial_search" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="3dp">
+
+                <!-- Owner serial number label and text -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="5dp">
+
+                    <EditText
+                        android:id="@+id/et_equipment_registration_serial_number_search"
+                        style="@style/TextContents"
+                        tools:text="@string/equipment_serial_number_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="@dimen/detail_text_margin_top"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/text_box_underline_selector"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="12"
+                        android:paddingBottom="2dp"
+                        android:singleLine="true"
+                        android:textColorHint="@drawable/hint_selector"
+                        android:theme="@style/EditTextStyleWhite" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <FrameLayout
+                    android:id="@+id/btn_equipment_serial_search"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/btn_email_search_equipment_edit"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:foreground="?selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/btnSerialSearchButtonImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/email_search_icon"
+                        android:textColor="@color/theme_primary_dark"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/serialSearchText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/theme_primary_dark"
+                        android:textSize="9sp"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_equipment_serial_search"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/transparent"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_serial_search_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="0dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_view_serial_search_message"
+                    style="@style/SerialSearchTextMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                    android:layout_marginEnd="@dimen/detail_side_margin"
+                    android:text="@string/label_dialog_serial_search_message" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Equipment serial number search -->
+
+</android.support.constraint.ConstraintLayout>

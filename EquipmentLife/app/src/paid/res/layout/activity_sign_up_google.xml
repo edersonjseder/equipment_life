@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary"
+    tools:context=".paid.view.activities.start.StartScreenActivity">
+
+    <ImageView
+        android:id="@+id/image_google_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="124dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/google_logo" />
+
+    <FrameLayout
+        android:id="@+id/btn_google_sign_up"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/image_google_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_sign_up"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:foreground="?selectableItemBackground">
+
+        <ImageButton
+            android:id="@+id/btn_sign_up_google_"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_google_logo"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <!-- Layout to put the dialog on the back screen content -->
+    <LinearLayout
+        android:id="@+id/ll_overbox_google_login_loading"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@drawable/overbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_google_login_loading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="333dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginBottom="349dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

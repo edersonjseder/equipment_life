@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_profile_details_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="1dp"
+    android:background="@drawable/transparent_card"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/toolbar_profile_width_land"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_profile_details"
+                    android:layout_width="@dimen/toolbar_profile_width_land"
+                    android:layout_height="@dimen/toolbar_profile_width_land"
+                    android:layout_marginTop="@dimen/activity_padding_land"
+                    android:layout_marginBottom="@dimen/activity_padding_land"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_account_circle_black_48"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_owner_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/owner_name_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/profile_title"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/border_color"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="@dimen/side_padding">
+
+            <!-- Owner CPF and phone label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_cpf_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <!-- Owner CPF label and text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_owner_cpf_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_cpf_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_input"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/et_profile_cpf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            tools:text="@string/owner_cpf_content"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_cpf_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"/>
+
+                </LinearLayout>
+
+                <!-- Owner phone label and text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_owner_phone_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_phone_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_local_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/et_profile_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="2dp"
+                            tools:text="@string/owner_phone_content"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_phone_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"
+                        android:layout_marginStart="1dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Owner email label and text -->
+            <TextView
+                android:id="@+id/tv_owner_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_email_label"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:drawableStart="@drawable/ic_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"/>
+
+                <TextView
+                    android:id="@+id/tv_owner_email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="20dp"
+                    tools:text="@string/owner_email_content"
+                    android:layout_marginTop="@dimen/detail_text_margin_top"
+                    style="@style/TextContents" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_owner_email_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/view_color"/>
+
+            <!-- Profile address and number label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_address_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Owner CPF label and text -->
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Owner address label and text -->
+                    <TextView
+                        android:id="@+id/tv_owner_address_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_address_label"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_navigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_owner_address_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="10dp"
+                            tools:text="@string/owner_address_content"
+                            android:layout_marginTop="@dimen/detail_text_margin_top"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_address_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+
+                <!-- Owner number label and text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_owner_number_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_number_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_owner_number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="2dp"
+                            tools:text="@string/owner_number_content"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_number_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"
+                        android:layout_marginStart="1dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Owner City label and text -->
+            <TextView
+                android:id="@+id/tv_owner_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/profile_detail_city_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                style="@style/TextLabels" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:drawableStart="@drawable/ic_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"/>
+
+                <TextView
+                    android:id="@+id/tv_owner_city_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="20dp"
+                    tools:text="@string/owner_city_content"
+                    style="@style/TextContents" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_owner_city_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <!-- Profile state and UF label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_state_uf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Owner CPF label and text -->
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Owner State label and text -->
+                    <TextView
+                        android:id="@+id/tv_owner_state_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_state_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        android:layout_marginStart="20dp"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_owner_state_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="20dp"
+                            tools:text="@string/owner_state_content"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_state_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+
+                <!-- Owner UF label and text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_owner_uf_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_uf_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="0dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_owner_uf_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="2dp"
+                            tools:text="@string/owner_uf_content"
+                            style="@style/TextContents" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_owner_uf_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view_color"
+                        android:layout_marginStart="1dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

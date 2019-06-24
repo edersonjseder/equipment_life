@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "887867072222",
+    "firebase_url": "https://equipment-life.firebaseio.com",
+    "project_id": "equipment-life",
+    "storage_bucket": "equipment-life.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887867072222:android:485423ec1a1c4798",
+        "android_client_info": {
+          "package_name": "com.life.equipmentlife.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887867072222-9qi6s905hkj4ge8mu6dsrm1rd6rt7l0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.life.equipmentlife.paid",
+            "certificate_hash": "4693555cc5c2f5fec6ac94a76e5b184f97bd0707"
+          }
+        },
+        {
+          "client_id": "887867072222-5jbjfqvqc4brut3otkelftdpcu2le58g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.life.equipmentlife.paid",
+            "certificate_hash": "952af6ce28563a9b223b3a03c6d742743272c0ea"
+          }
+        },
+        {
+          "client_id": "887867072222-afg2nbtfstf0s55idfsil7eu248iqet7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.life.equipmentlife.paid",
+            "certificate_hash": "10e99439f9f4da5965d24a9f73bd96994c29d3ca"
+          }
+        },
+        {
+          "client_id": "887867072222-orgrl6b1j1muuffro3rrmntdi4kud729.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDcEsHwZIZSuAkUR3U-Qj8dQN53GgVHho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887867072222-orgrl6b1j1muuffro3rrmntdi4kud729.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Equipment Life</string>
+    <string name="btn_forgot_password">Olvidó tu contraseña?</string>
+    <string name="dialog_permission_message">Esta aplicación necesita de permiso para usar esa caracteristica. Usted puede garantilas en las configuraciones del aplicativo</string>
+    <string name="dialog_permission_title">Garantir permisos</string>
+    <string name="equipment_list_empty">Lista vacia</string>
+</resources>

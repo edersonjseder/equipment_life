@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Equipment list sides -->
+    <dimen name="side_padding">9dp</dimen>
+    <dimen name="side_padding_search">25dp</dimen>
+</resources>

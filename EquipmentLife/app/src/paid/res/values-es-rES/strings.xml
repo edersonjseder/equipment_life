@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_add_new_equipment">Adicionar nueva informaccion del equipamiento</string>
+    <string name="action_edit_equipment_details">Editar los detalles de la información del equipamiento en la base de datos</string>
+    <string name="action_edit_profile_detail">Editar la información de la edición del perfil en la base de datos</string>
+    <string name="action_edit_save_cancel_equipment">Cancelar la confirmación de la edición de la información del equipamiento en la base de datos</string>
+    <string name="action_edit_save_cancel_profile">"Cancelar la confirmación de la edición de la información del perfil en la base de datos "</string>
+    <string name="action_edit_save_equipment">Confirmar la edición de la información del equipamiento en la base de datos</string>
+    <string name="action_edit_save_profile">Confirmar la edición de la información del perfil en la base de datos</string>
+    <string name="action_save_new_equipment">Confirmar nueva información del equipamiento en la base de datos</string>
+    <string name="action_save_profile_registration">Confirmar el registro de la información del perfil en la base de datos</string>
+    <string name="app_name">Equipment Life - Pago</string>
+    <string name="btn_forgot_password">Olvidó tu contraseña?</string>
+    <string name="credentials_cancel_dialog_button_text">Cancelar</string>
+    <string name="credentials_sign_up_dialog_button_text">Confirmar</string>
+    <string name="description_widget_text">Muestra la lista del equipamientos en la widget de lista</string>
+    <string name="detail_equipment_image_description">Detalle de la imagen del equipamiento</string>
+    <string name="equipment_brand_label">Marca:</string>
+    <string name="equipment_brand_validator_required">Marca es necesaria</string>
+    <string name="equipment_choose_image_description">Sube la imagen del equipamiento en la nube de almacenamiento</string>
+    <string name="equipment_detail_edit_toolbar_title_label">Edición de los detalles del equipamiento</string>
+    <string name="equipment_detail_image_status">Muestra la demonstración del estado del equipamiento con un icono para el usuario</string>
+    <string name="equipment_detail_toolbar_title_label">Detalles del equipamiento</string>
+    <string name="equipment_empty_list_label">Aún no hay equipamientos registrados</string>
+    <string name="equipment_image_upload_label">Imagen del equipamiento:</string>
+    <string name="equipment_initial_image_button_facebook_login">Muestra el icono del Facebook como una opción para el usuario se conectar através de su cuenta</string>
+    <string name="equipment_initial_image_button_google_login">Muestra el icono del Google como una opción para el usuario se conectar através de su cuenta</string>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_sign_up"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_sign_up_background"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="140dp"
+    android:layout_marginBottom="80dp"
+    android:elevation="4dp"
+    android:gravity="center"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:background="@drawable/border_color"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_view_sign_up_label"
+            style="@style/text_sign_up_title"
+            android:text="@string/txt_sign_up_title" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Email -->
+            <android.support.design.widget.TextInputLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText_profile_email"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:textColorHint="@drawable/hint_selector"
+                    style="@style/TextContents"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="7dp"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector"
+                    android:hint="@string/login_email_label" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Password -->
+            <android.support.design.widget.TextInputLayout
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white_text_color"
+                app:passwordToggleDrawable="@drawable/show_password_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText_profile_password"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:singleLine="true"
+                    android:maxLength="15"
+                    android:inputType="textPassword"
+                    android:textColorHint="@drawable/hint_selector"
+                    style="@style/TextContents"
+                    android:drawableStart="@drawable/ic_key"
+                    android:drawablePadding="7dp"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector"
+                    android:hint="@string/login_password_label" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Confirm password -->
+            <android.support.design.widget.TextInputLayout
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white_text_color"
+                app:passwordToggleDrawable="@drawable/show_password_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText_profile_confirm_password"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:singleLine="true"
+                    android:maxLength="15"
+                    android:inputType="textPassword"
+                    android:textColorHint="@drawable/hint_selector"
+                    style="@style/TextContents"
+                    android:drawableStart="@drawable/ic_key"
+                    android:drawablePadding="7dp"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector"
+                    android:hint="@string/login_password_confirm_label" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_cancel_sign_up_credentials"
+                android:layout_width="110dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rounded_drawable"
+                style="@style/StyleEquipmentChooseButtonText"
+                android:text="@string/credentials_cancel_dialog_button_text"
+                android:contentDescription="@string/register_credentials_description" />
+
+            <Button
+                android:id="@+id/button_save_sign_up_credentials"
+                android:layout_width="110dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rounded_drawable"
+                style="@style/StyleEquipmentChooseButtonText"
+                android:text="@string/credentials_sign_up_dialog_button_text"
+                android:contentDescription="@string/register_credentials_description" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar_profile_login_firebase"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/theme_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/details_toolbar"
+        android:orientation="vertical"
+        android:elevation="2dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Toolbar Equipment details content include -->
+        <include layout="@layout/toolbar_equipment_details" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_toolbar"
+        app:layout_constraintVertical_bias="0.425">
+
+        <!-- Equipment content include -->
+        <include layout="@layout/equipment_detail_content" />
+
+    </LinearLayout>
+
+    <!-- Layout to put the dialog on the back screen content -->
+    <LinearLayout
+        android:id="@+id/ll_overbox_equipment_details_loading"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@drawable/overbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_equipment_detail_loading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="333dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginBottom="349dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

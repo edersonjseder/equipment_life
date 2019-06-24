@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ToolBar include -->
+        <include layout="@layout/equipment_list_toolbar" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout_main"
+            android:layout_marginTop="2dp"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_equipment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/list_side_margin"
+                android:paddingRight="@dimen/list_side_margin"
+                android:layoutAnimation="@anim/layout_animation_slide_right"
+                android:paddingBottom="18dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_equipment_empty_list_text"
+            android:background="@drawable/rounded_corners"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/equipment_empty_list_text_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.7"
+                android:src="@drawable/ic_folder_open"/>
+
+            <TextView
+                android:id="@+id/tv_equipment_empty_list_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/equipment_empty_list_label"
+                style="@style/ThemeEquipmentEmptyListText"/>
+
+        </LinearLayout>
+
+        <!-- Layout to put the dialog on the back screen content -->
+        <LinearLayout
+            android:id="@+id/ll_overbox_equipment_list_loading"
+            android:orientation="vertical"
+            android:elevation="3dp"
+            android:background="@drawable/overbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/pb_equipment_list_loading"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="185dp"
+                android:layout_marginTop="333dp"
+                android:layout_marginEnd="184dp"
+                android:layout_marginBottom="349dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_add_new_equipment"
+            android:background="@drawable/add_fab_background"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/icon_plus_fab"
+            android:elevation="@dimen/fab_elevation"
+            android:contentDescription="@string/action_add_new_equipment"
+            app:fabCustomSize="55dp"
+            app:maxImageSize="30dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

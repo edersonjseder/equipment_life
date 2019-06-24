@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary"
+    tools:context=".paid.view.activities.start.StartScreenActivity">
+
+    <ImageView
+        android:id="@+id/image_initial_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="124dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/initial_screen_logo" />
+
+    <FrameLayout
+        android:id="@+id/btn_initial_sign_up"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/image_initial_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/btn_sign_up"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:foreground="?selectableItemBackground">
+
+        <TextView
+            android:id="@+id/signUnButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/text_sign_up"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_initial_sign_in"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/btn_initial_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_sign_up"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:foreground="?selectableItemBackground">
+
+        <TextView
+            android:id="@+id/signInButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/text_sign_in"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_login_text"
+        android:text="@string/login_text"
+        android:textColor="@color/white_text_color"
+        android:layout_above="@+id/ll_social_buttons"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="19sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_social_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/circle_background"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/btn_sign_up_google"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_google_logo"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+            <!-- A small divider -->
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <FrameLayout
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/circle_background"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/btn_sign_up_facebook"
+                    android:layout_width="26dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_facebook_logo"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Equipment Life</string>
+
+    <string name="text_sign_up">Sign Up</string>
+    <string name="text_sign_in">Sign In</string>
+    <string name="login_text">or login with</string>
+    <string name="login_text_google">Google login</string>
+    <string name="hint_login_password">Password</string>
+    <string name="hint_login_password_confirm">Confirm password</string>
+    <string name="hint_login_email">Email</string>
+    <string name="text_login">Login</string>
+    <string name="text_email_search">></string>
+    <string name="internet_connection_back_message">Back online</string>
+    <string name="transition_enter_registration">Enter Registration</string>
+    <string name="login_profile_validator_email_required_error">Email is required</string>
+    <string name="login_profile_validator_password_required_error">Password is required</string>
+    <string name="btn_forgot_password">Forgot your password?</string>
+    <string name="reset_passowrd_profile_email_send">Send</string>
+    <string name="reset_passowrd_profile_email_cancel">Cancel</string>
+    <string name="label_forgot_password_title">Recover password</string>
+
+    <string name="txt_sign_up_title">Enter credentials</string>
+    <string name="label_dialog_serial_search">Verify if the equipment is stolen</string>
+    <string name="label_dialog_serial_search_message">The equipment with this serial was stolen</string>
+    <string name="label_dialog_serial_search_label">Serial:</string>
+    <string name="equipment_searched_is_stolen">Stolen</string>
+    <string name="equipment_list_empty">Empty list</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GO TO SETTINGS</string>
+    <string name="path_uri">path</string>
+    <string name="package_settings">package</string>
+    <string name="equipment_registration_serial_already_registered">Equipment already registered</string>
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:label="@string/app_name"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="com.life.equipmentlife.paid.view.activities.signup.signupgoogle.SignUpGoogleActivity"></activity>
+        <activity android:name="com.life.equipmentlife.paid.view.activities.signup.socialcheck.SignUpSocialCheck"></activity>
+        <activity android:name="com.life.equipmentlife.paid.view.activities.imagepicker.ImagePickerActivity" />
+        <activity
+            android:name="com.life.equipmentlife.paid.view.activities.slider.SliderScreenActivity"
+            android:theme="@style/ThemeLifeCam">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Initial screen activity -->
+        <activity android:name="com.life.equipmentlife.paid.view.activities.start.StartScreenActivity">
+            <intent-filter>
+                <action android:name="com.life.equipmentlife.paid.view.activities.initial.StartScreenActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.life.equipmentlife.paid.view.activities.equipment.registration.EquipmentRegistrationActivity"
+            android:parentActivityName="com.life.equipmentlife.paid.view.activities.equipment.list.EquipmentListActivity"
+            android:theme="@style/ThemeLifeCam.Red">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.life.equipmentlife.paid.view.activities.equipment.list.EquipmentListActivity" />
+        </activity>
+        <activity
+            android:name="com.life.equipmentlife.paid.view.activities.profile.details.ProfileDetailsActivity"
+            android:label="@string/title_activity_profile_details"
+            android:theme="@style/ThemeLifeCam.NoActionBar" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.login.LoginActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.profile.registration.ProfileRegistrationActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.profile.edit.ProfileDetailsEditActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.equipment.edit.EquipmentDetailsEditActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.equipment.details.EquipmentDetailsActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.equipment.list.EquipmentListActivity" />
+        <activity android:name="com.life.equipmentlife.paid.view.activities.signup.signupfacebook.SignUpFacebookActivity" /> <!-- uCrop cropping activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeLifeCam.NoActionBar" /> <!-- cache directory file provider paths -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Facebook login -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

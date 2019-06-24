@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_activity_equipment_list_details_edit"
+    android:transitionName="@string/transition_enter_registration"
+    android:background="@color/theme_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Equipment details edit include -->
+        <include layout="@layout/toolbar_equipment_details_edit" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_content"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:background="@drawable/border_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_toolbar"
+        app:layout_constraintVertical_bias="0.425">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="400dp"
+                android:layout_height="match_parent">
+
+                <!-- Equipment details edit include -->
+                <include layout="@layout/equipment_details_edit_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Equipment Image upload -->
+                <!-- Image selection -->
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_toolbar">
+
+                    <ImageView
+                        android:id="@+id/imageView_equipment_edit_picture_land"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/album_icon"
+                        android:contentDescription="@string/equipment_upload_image_description"
+                        android:gravity="center"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/image_camera_picture_upload"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@color/menu_transparent"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:src="@drawable/ic_camera_picture" />
+
+                    <!-- Equipment Image upload progressBar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="5dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar_equipment_edit_upload_picture"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <!-- Equipment Image upload progressBar -->
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Layout to put the dialog on the back screen content -->
+    <LinearLayout
+        android:id="@+id/ll_overbox_equipment_details_edit_loading"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@drawable/overbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_equipment_detail_edit_loading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginBottom="349dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_equipment_search"
+        android:icon="@drawable/menu_search_icon"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:title="@string/equipment_list_menu_search"/>
+
+    <item
+        android:id="@+id/item_equipment_owned"
+        android:icon="@drawable/ic_owned"
+        android:title="@string/equipment_owned_menu"
+        android:contentDescription="@string/equipment_menu_image_owned_status_icon"/>
+
+    <item
+        android:id="@+id/item_equipment_sold"
+        android:icon="@drawable/ic_sold"
+        android:title="@string/equipment_sold_menu"
+        android:contentDescription="@string/equipment_menu_image_sold_status_icon"/>
+
+    <item
+        android:id="@+id/item_equipment_stolen"
+        android:icon="@drawable/ic_stolen"
+        android:title="@string/equipment_stolen_menu"
+        android:contentDescription="@string/equipment_menu_image_stolen_status_icon"/>
+
+</menu>

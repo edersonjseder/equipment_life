@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary"
+    tools:context=".paid.view.activities.signup.socialcheck.SignUpSocialCheck">
+
+    <!-- Layout to put the dialog on the back screen content -->
+    <LinearLayout
+        android:id="@+id/ll_overbox_check_social_login_loading"
+        android:orientation="vertical"
+        android:elevation="3dp"
+        android:background="@drawable/overbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_check_social_login_loading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="333dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginBottom="349dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_profile_details_edit_content"
+    android:orientation="vertical"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/transparent_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/toolbar_profile_width"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_profile_edit"
+                    android:layout_width="@dimen/toolbar_profile_width"
+                    android:layout_height="@dimen/toolbar_profile_width"
+                    android:layout_marginTop="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/activity_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_account_circle_black_48"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="1dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img_plus_profile_edit"
+                    android:layout_width="@dimen/ic_plus_width"
+                    android:layout_height="@dimen/ic_plus_width"
+                    android:layout_alignBottom="@id/img_profile_edit"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_plus"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="1" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/border_color"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="@dimen/side_padding">
+
+            <!-- Owner name label and text -->
+            <TextView
+                android:id="@+id/tv_owner_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_name_label"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="4dp"
+                    tools:text="@string/owner_name_content"
+                    android:layout_marginTop="@dimen/detail_text_margin_top"
+                    style="@style/TextContents"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="7dp"
+                    android:textColorHint="@drawable/hint_selector"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Owner CPF label and text -->
+            <TextView
+                android:id="@+id/tv_owner_cpf_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_cpf_label"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_profile_cpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:maxLength="14"
+                    android:paddingBottom="4dp"
+                    android:drawablePadding="7dp"
+                    android:drawableStart="@drawable/ic_input"
+                    tools:text="@string/owner_cpf_content"
+                    android:inputType="numberDecimal"
+                    style="@style/TextContents"
+                    android:textColorHint="@drawable/hint_selector"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Owner phone label and text -->
+            <TextView
+                android:id="@+id/tv_owner_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_phone_label"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:maxLength="15"
+                    android:drawablePadding="7dp"
+                    android:paddingBottom="4dp"
+                    android:drawableStart="@drawable/ic_local_phone"
+                    tools:text="@string/owner_phone_content"
+                    android:textColorHint="@drawable/hint_selector"
+                    android:inputType="phone"
+                    style="@style/TextContents"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Owner address label and text -->
+            <TextView
+                android:id="@+id/tv_owner_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_email_label"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColorHint="@drawable/hint_selector"
+                    tools:text="@string/owner_email_content"
+                    android:layout_marginTop="@dimen/detail_text_margin_top"
+                    style="@style/TextContents"
+                    android:drawablePadding="7dp"
+                    android:paddingBottom="2dp"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Owner CEP label and text -->
+            <TextView
+                android:id="@+id/tv_profile_cep_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_detail_cep_label"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextLabels" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_profile_cep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:maxLength="9"
+                    android:textColorHint="@drawable/hint_selector"
+                    android:inputType="phone"
+                    tools:text="@string/owner_cep_content"
+                    android:drawablePadding="7dp"
+                    android:paddingBottom="4dp"
+                    android:drawableStart="@drawable/ic_cep"
+                    style="@style/TextContents"
+                    android:theme="@style/EditTextStyleWhite"
+                    android:background="@drawable/text_box_underline_selector" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Owner address and number label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_address_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Owner address label and text -->
+                    <TextView
+                        android:id="@+id/tv_profile_address_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_address_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_profile_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:textColorHint="@drawable/hint_selector"
+                            tools:text="@string/owner_address_content"
+                            android:layout_marginTop="@dimen/detail_text_margin_top"
+                            style="@style/TextContents"
+                            android:drawablePadding="7dp"
+                            android:paddingBottom="4dp"
+                            android:drawableStart="@drawable/ic_navigation"
+                            android:theme="@style/EditTextStyleWhite"
+                            android:background="@drawable/text_box_underline_selector" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- A small divider -->
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <!-- owner number label and text -->
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_profile_number_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_number_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_profile_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/owner_number_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:maxLength="8"
+                            android:textColorHint="@drawable/hint_selector"
+                            android:paddingBottom="4dp"
+                            android:drawablePadding="7dp"
+                            style="@style/TextContents"
+                            android:theme="@style/EditTextStyleWhite"
+                            android:background="@drawable/text_box_underline_selector" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Owner city label and text -->
+            <TextView
+                android:id="@+id/tv_owner_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/profile_detail_city_label"
+                android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                android:layout_marginEnd="@dimen/detail_side_margin"
+                style="@style/TextLabels" />
+
+            <EditText
+                android:id="@+id/et_profile_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/hint_profile_edit_city"
+                android:textColorHint="@drawable/hint_selector"
+                tools:text="@string/owner_city_content"
+                style="@style/TextContents"
+                android:drawablePadding="5dp"
+                android:paddingBottom="2dp"
+                android:drawableStart="@drawable/ic_city"
+                android:theme="@style/EditTextStyleWhite"
+                android:background="@drawable/text_box_underline_selector" />
+
+            <!-- Owner State and UF label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_state_uf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Owner state label and text -->
+                    <TextView
+                        android:id="@+id/tv_profile_state_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_state_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_profile_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:textColorHint="@drawable/hint_selector"
+                            tools:text="@string/owner_state_content"
+                            style="@style/TextContents"
+                            android:drawablePadding="7dp"
+                            android:paddingBottom="4dp"
+                            android:drawableStart="@drawable/ic_location"
+                            android:theme="@style/EditTextStyleWhite"
+                            android:background="@drawable/text_box_underline_selector" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- A small divider -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <!-- owner UF label and text -->
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_profile_uf_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_detail_uf_label"
+                        android:layout_marginTop="@dimen/detail_label_text_margin_top"
+                        android:layout_marginEnd="@dimen/detail_side_margin"
+                        style="@style/TextLabels" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/et_profile_uf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/owner_uf_content"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:maxLength="2"
+                            android:textColorHint="@drawable/hint_selector"
+                            android:paddingBottom="4dp"
+                            android:drawablePadding="7dp"
+                            style="@style/TextContents"
+                            android:theme="@style/EditTextStyleWhite"
+                            android:background="@drawable/text_box_underline_selector" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Owner Login credentials label and text -->
+            <LinearLayout
+                android:id="@+id/layout_owner_passwords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <!-- Password -->
+                <TextView
+                    android:id="@+id/tv_owner_password_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_password_label"
+                    style="@style/TextLabels" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/et_profile_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="@string/owner_password_content"
+                        android:textColorHint="@drawable/hint_selector"
+                        android:inputType="numberPassword"
+                        style="@style/TextContents"
+                        android:drawablePadding="5dp"
+                        android:paddingBottom="2dp"
+                        android:drawableStart="@drawable/ic_key"
+                        android:theme="@style/EditTextStyleWhite"
+                        android:background="@drawable/text_box_underline_selector" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Password Confirm -->
+                <TextView
+                    android:id="@+id/tv_owner_password_confirm_label"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_detail_password_confirm_label"
+                    style="@style/TextLabels" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/et_profile_password_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="@string/owner_password_content"
+                        android:textColorHint="@drawable/hint_selector"
+                        android:inputType="numberPassword"
+                        style="@style/TextContents"
+                        android:drawablePadding="5dp"
+                        android:paddingBottom="2dp"
+                        android:drawableStart="@drawable/ic_key"
+                        android:theme="@style/EditTextStyleWhite"
+                        android:background="@drawable/text_box_underline_selector" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
